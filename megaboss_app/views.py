@@ -1,6 +1,3 @@
-import json
-from django.contrib.sessions.backends.db import SessionStore
-from django.core.serializers.json import DjangoJSONEncoder
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.contrib import messages

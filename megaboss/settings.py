@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://127.0.0.1:6379/',
+        'LOCATION': 'redis://redis:6370/',
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
         }
@@ -66,6 +66,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
+     "http://5.101.50.215:8080",
     "http://localhost:8080",
     "http://127.0.0.1:8000",
     'http://localhost:5173',
