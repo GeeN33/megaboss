@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="files/air-datepicker.css?_v=20230429190638">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230429190638">
+   <script src="files/air-datepicker.js?_v=20230429190638" defer></script>
+   <script src="js/app.min.js?_v=20230429190638" defer></script>
+   <title>НИИПГаза</title>
+</head>
+
+<body>
+   <div class="page">
+      <header class="header">
+   <div class="header__content">
+      <div class="header__content__logo">
+         <img src="images/logo.svg" alt="logotype" class="img-con">
+      </div>
+      <nav class="header__content__nav">
+         <ul class="header__content__nav__list">
+            <li class="header__content__nav__list__item active">
+               <a href="#" class="header__content__nav__list__item__link">Планы работ</a>
+            </li>
+            <li class="header__content__nav__list__item">
+               <a href="#" class="header__content__nav__list__item__link">Транспорт</a>
+            </li>
+            <li class="header__content__nav__list__item">
+               <a href="#" class="header__content__nav__list__item__link">Оборудование</a>
+            </li>
+            <li class="header__content__nav__list__item">
+               <a href="#" class="header__content__nav__list__item__link">Управление пользователями</a>
+            </li>
+            <li class="header__content__nav__list__item">
+               <a href="#" class="header__content__nav__list__item__link">Контакты</a>
+            </li>
+            <li class="header__content__nav__list__item">
+               <a href="#" class="header__content__nav__list__item__link">Сотрудники</a>
+            </li>
+            <li class="header__content__nav__list__item">
+               <a href="#" class="header__content__nav__list__item__link">Отчеты</a>
+            </li>
+            <li class="header__content__nav__list__item__points __select">
+               <span class="header__content__nav__list__item__link __select__header">...</span>
+               <div class="header__content__user__info__role__header__content __select__body">
+                  <a href="#"
+                     class="header__content__user__info__role__header__content__item __select__body__item">Отчеты</a>
+                  <a href="#"
+                     class="header__content__user__info__role__header__content__item __select__body__item">Сотрудники</a>
+                  <a href="#"
+                     class="header__content__user__info__role__header__content__item __select__body__item">Контакты</a>
+                  <a href="#"
+                     class="header__content__user__info__role__header__content__item __select__body__item">Управление
+                     пользователями</a>
+                  <a href="#"
+                     class="header__content__user__info__role__header__content__item __select__body__item">Оборудование</a>
+               </div>
+            </li>
+         </ul>
+      </nav>
+      <div class="header__content__user">
+         <div class="burger">
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+         </div>
+         <div class="header__content__user__message">
+            <img src="images/mes.svg" alt="message" class="img-con">
+         </div>
+         <div class="header__content__user__info">
+            <div class="header__content__user__info__avatar">
+               <picture><source srcset="#" type="image/webp"><img src="#" alt="userprewi" class="img-ab"></picture>
+            </div>
+            <div class="header__content__user__info__text">
+               <span class="header__content__user__info__name">Имя Фамилия</span>
+               <div class="header__content__user__info__role __select">
+                  <div class="header__content__user__info__role__header __select__header">
+                     <span class="header__content__user__info__role__header__text __selectText">Должность</span>
+                     <div class="header__content__user__info__role__header__arrow">
+                        <img src="images/arrow.svg" alt="arrow" class="img-con">
+                     </div>
+                  </div>
+                  <div class="header__content__user__info__role__header__content __select__body">
+                     <span
+                        class="header__content__user__info__role__header__content__item __select__body__item">должность1</span>
+                     <span
+                        class="header__content__user__info__role__header__content__item __select__body__item">должность1</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+      <main class="main">
+   <div class="main__container __effect">
+      <div class="main__scroll">
+         <div class="main__content">
+            <div class="row">
+               <div class="row__checked"> </div>
+               <div class="row__content __header">
+                  <span class="row__content__col">ФИО исполнителей</span>
+                  <span class="row__content__col">Виды работ</span>
+                  <span class="row__content__col">кол-во в ед. измерения (шт/км)</span>
+                  <span class="row__content__col">Затраченное время, дней</span>
+                  <span class="row__content__col">Скорость выполенения</span>
+               </div>
+            </div>
+            <div class="row">
+               <!-- этот блок обязательный -->
+               <div class="row__checked"></div>
+               <div class="row__content">
+                  <span class="row__content__col">Букин С.В. - инженер<br><br>Рыбкин О.А. - дефектосколист</span>
+                  <div class="row__content__col04">
+                     <span class="row__content__col">Паспортизация ГТМ</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">Анализ и оценка эффективности ГТМ</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">ЭПБ скважин</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">Комплексное</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">Комплексное периодическое обследование</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">Приемочное (первичное) обследование</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">Детальное комплексное обследование</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">Обследование технологических трубопроводов</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">22</span>
+                     <span class="row__content__col">22</span>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <!-- этот блок обязательный -->
+               <div class="row__checked"></div>
+               <div class="row__content">
+                  <span class="row__content__col">Букин С.В. - инженер<br><br>Рыбкин О.А. - дефектосколист</span>
+                  <div class="row__content__col04">
+                     <span class="row__content__col">Паспортизация ГТМ</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">Анализ и оценка эффективности ГТМ</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">ЭПБ скважин</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">Комплексное</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">Комплексное периодическое обследование</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">Приемочное (первичное) обследование</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">Детальное комплексное обследование</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">Обследование технологических трубопроводов</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <!-- этот блок обязательный -->
+               <div class="row__checked"></div>
+               <div class="row__content">
+                  <span class="row__content__col">Букин С.В. - инженер<br><br>Рыбкин О.А. - дефектосколист</span>
+                  <div class="row__content__col04">
+                     <span class="row__content__col">Паспортизация ГТМ</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">Анализ и оценка эффективности ГТМ</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">ЭПБ скважин</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">Комплексное</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">Комплексное периодическое обследование</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">Приемочное (первичное) обследование</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">Детальное комплексное обследование</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">Обследование технологических трубопроводов</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                     <span class="row__content__col">20</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</main>
+   </div>
+</body>
+
+</html>

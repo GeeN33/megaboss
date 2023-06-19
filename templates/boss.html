@@ -1,0 +1,446 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href={% static "files/air-datepicker.css?_v=20230429190638"%}>
+   <link rel="stylesheet" href={% static "css/style.min.css?_v=20230429190638"%}>
+   <script src={% static "files/air-datepicker.js?_v=20230429190638"%}></script>
+   <script src={% static "js/app.min.js?_v=20230429190638"%}></script>
+   <title>НИИПГаза</title>
+</head>
+
+<body>
+   <div class="page">
+
+      <header class="header __navbos">
+   <div class="header__content">
+      <div class="header__content__logo">
+         <img src="images/logo.svg" alt="logotype" class="img-con">
+      </div>
+      <nav class="header__content__nav">
+         <ul class="header__content__nav__list">
+            <li class="header__content__nav__list__item ">
+               <a href="#" class="header__content__nav__list__item__link">Планы работ</a>
+            </li>
+            <li class="header__content__nav__list__item active">
+               <a href="#" class="header__content__nav__list__item__link">Оборудование</a>
+            </li>
+            <li class="header__content__nav__list__item">
+               <a href="#" class="header__content__nav__list__item__link">Контакты</a>
+            </li>
+            <li class="header__content__nav__list__item__points __select">
+               <span class="header__content__nav__list__item__link __select__header">...</span>
+               <div class="header__content__user__info__role__header__content __select__body">
+                  <a href="#"
+                     class="header__content__user__info__role__header__content__item __select__body__item">Контакты</a>
+                  <a href="#"
+                     class="header__content__user__info__role__header__content__item __select__body__item">Оборудование</a>
+                  <a href="#"
+                     class="header__content__user__info__role__header__content__item __select__body__item">Планы
+                     работ</a>
+               </div>
+            </li>
+         </ul>
+      </nav>
+      <div class="header__content__user">
+         <div class="burger">
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+         </div>
+         <div class="header__content__user__message">
+            <img src="images/mes.svg" alt="message" class="img-con">
+         </div>
+         <div class="header__content__user__info">
+            <div class="header__content__user__info__avatar">
+               <picture><source srcset="#" type="image/webp"><img src="#" alt="userprewi" class="img-ab"></picture>
+            </div>
+            <div class="header__content__user__info__text">
+               <span class="header__content__user__info__name">Имя Фамилия</span>
+               <div class="header__content__user__info__role __select">
+                  <div class="header__content__user__info__role__header __select__header">
+                     <span class="header__content__user__info__role__header__text __selectText">Должность</span>
+                     <div class="header__content__user__info__role__header__arrow">
+                        <img src="images/arrow.svg" alt="arrow" class="img-con">
+                     </div>
+                  </div>
+                  <div class="header__content__user__info__role__header__content __select__body">
+                     <span
+                        class="header__content__user__info__role__header__content__item __select__body__item">должность1</span>
+                     <span
+                        class="header__content__user__info__role__header__content__item __select__body__item">должность1</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+
+      <main class="main">
+   <div class="main__container __ItemsFront __boss">
+      <div class="main__header">
+         <button class="main__header_btn _btn">Добавить обьект</button>
+         <div class="main__header__select __select">
+            <div class="main__header__select__header __select__header">
+               <span class="main__header__select__header__text">Все-</span>
+               <div class="main__header__select__header__arrow">
+                  <img src="images/arrow.svg" alt="arrow" class="img-con">
+               </div>
+            </div>
+            <div class="main__header__select__body __select__body">
+               <div class="main__header__select__body__item">
+                  <div class="checkbox">
+                     <input id="checkbox-1" type="checkbox" class="ckeck">
+                     <label for="checkbox-1" class="ckeck-label">Все</label>
+                  </div>
+               </div>
+               <div class="main__header__select__body__item">
+                  <div class="checkbox">
+                     <input id="checkbox-2" type="checkbox" class="ckeck">
+                     <label for="checkbox-2" class="ckeck-label">В работе, полевой этап</label>
+                  </div>
+               </div>
+               <div class="main__header__select__body__item">
+                  <div class="checkbox">
+                     <input id="checkbox-3" type="checkbox" class="ckeck">
+                     <label for="checkbox-3" class="ckeck-label">В работе, камеральный этап</label>
+                  </div>
+               </div>
+               <div class="main__header__select__body__item">
+                  <div class="checkbox">
+                     <input id="checkbox-4" type="checkbox" class="ckeck">
+                     <label for="checkbox-4" class="ckeck-label">Завершен полевой этап</label>
+                  </div>
+               </div>
+               <div class="main__header__select__body__item">
+                  <div class="checkbox">
+                     <input id="checkbox-5" type="checkbox" class="ckeck">
+                     <label for="checkbox-5" class="ckeck-label">Завершен камеральный этап</label>
+                  </div>
+               </div>
+               <div class="main__header__select__body__item">
+                  <div class="checkbox">
+                     <input id="checkbox-6" type="checkbox" class="ckeck">
+                     <label for="checkbox-6" class="ckeck-label">Отложен</label>
+                  </div>
+               </div>
+               <div class="main__header__select__body__item">
+                  <div class="checkbox">
+                     <input id="checkbox-7" type="checkbox" class="ckeck">
+                     <label for="checkbox-7" class="ckeck-label">Ожидает отправки</label>
+                  </div>
+               </div>
+               <div class="main__header__select__body__item">
+                  <div class="checkbox">
+                     <input id="checkbox-8" type="checkbox" class="ckeck">
+                     <label for="checkbox-8" class="ckeck-label">Исключён из плана</label>
+                  </div>
+               </div>
+               <div class="main__header__select__body__item">
+                  <div class="checkbox">
+                     <input id="checkbox-9" type="checkbox" class="ckeck">
+                     <label for="checkbox-9" class="ckeck-label">Не выведен в ДО Принципалом</label>
+                  </div>
+               </div>
+               <div class="main__header__select__body__item">
+                  <div class="checkbox">
+                     <input id="checkbox-10" type="checkbox" class="ckeck">
+                     <label for="checkbox-10" class="ckeck-label">Нет</label>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="main__header__right">
+            <div class="main__header__right__text">
+               <div class="main__header__right__text__data">
+                  <input type="text" class="main__header__right__text__data__input data-picker">
+               </div>
+               Дата начала<br>с <span>09.02.2023 до 09.03.2023</span>
+            </div>
+            <div class="main__header__right__upload">
+               <img src="images/upload.svg" alt="upload" class="img-con">
+            </div>
+            <div class="main__header__right__more">
+               <img src="images/more.svg" alt="more" class="img-con">
+            </div>
+         </div>
+      </div>
+      <div class="main__scroll">
+         <div class="main__content">
+            <div class="row">
+               <div class="row__checked"></div>
+               <div class="row__content">
+                  <span class="row__content__col">№ п/п</span>
+                  <span class="row__content__col">Наименование и тип (обозначение)</span>
+                  <span class="row__content__col">Назначение</span>
+                  <span class="row__content__col">Изготовитель, зав. №,
+                     год изготовления, ввода в эксплуатацию </span>
+                  <span class="row__content__col">Технические и метрологические характеристики</span>
+                  <span class="row__content__col">Владелец оборудования</span>
+                  <span class="row__content__col03">
+                     <span class="row__content__col __full03">№ документа о поверке, калибровке, аттестации. Дата и срок
+                        действия документа или отметка о техническом состоянии</span>
+                     <span class="row__content__col">№ поверки</span>
+                     <span class="row__content__col">Дата последней поверки</span>
+                     <span class="row__content__col">Срок действия</span>
+
+                  </span>
+                  <span class="row__content__col">Статус</span>
+               </div>
+               <div class="row__file">
+               </div>
+            </div>
+            <div class="row">
+               <!-- этот блок обязательный -->
+               <div class="row__checked"></div>
+               <div class="row__content">
+                  <span class="row__content__col">1</span>
+                  <span class="row__content__col">2</span>
+                  <span class="row__content__col">3</span>
+                  <span class="row__content__col">4</span>
+                  <span class="row__content__col">5</span>
+                  <span class="row__content__col">6</span>
+                  <div class="row__content__col03">
+                     <span class="row__content__col">7</span>
+                     <span class="row__content__col">8</span>
+                     <span class="row__content__col">9</span>
+
+                  </div>
+                  <span class="row__content__col">10</span>
+               </div>
+               <div class="row__file">
+               </div>
+            </div>
+            <div class="row">
+               <div class="row__checked"></div>
+               <div class="row__content">
+                  <span class="row__content__col __full">Ультразвуковой метод контроля</span>
+               </div>
+               <div class="row__file"> </div>
+            </div>
+            <div class="row">
+               <!-- этот блок обязательный -->
+               <input id="check-12" type="checkbox" class="check">
+               <label for="check-12" class="row__checked"> </label>
+               <div class="row__content">
+                  <span class="row__content__col">2</span>
+                  <span class="row__content__col">Дефектоскоп УД2-70<br>
+                     (Преобразователь П 121- 5 – 65-М - 003,<br>
+                     П 121- 2.5 - 65,<br>
+                     П 121- 5 – 70-М - 003)</span>
+                  <span class="row__content__col">Ультразвуковой контроль металла и сварных соединений</span>
+                  <span class="row__content__col">ООО "НПК ЛУЧ"<br>
+                     № 1245, 2005/2018г.<br>
+                     № 010<br>
+                     № 044<br>
+                     № 134</span>
+                  <span class="row__content__col">от 2 до 5000 мм<br>
+                     ±(0,5+0,02Н)</span>
+                  <span class="row__content__col">ООО
+                     «НИИПГАЗА»</span>
+                  <div class="row__content__col03">
+                     <span class="row__content__col">С-АБ/05-03- 2022/139655940</span>
+                     <span class="row__content__col">05.03.2022</span>
+                     <span class="row__content__col">04.03.2023</span>
+
+                  </div>
+                  <span class="row__content__col __status-free">Свободен</span>
+               </div>
+               <div class="row__file">
+                  <div class="row__file__message __select">
+                     <div class="row__file__img __free __select__header">
+                        <img src="images/plain.svg" alt="foldersmall" class="img-con">
+                     </div>
+                     <div class="row__file__message__body __select__body">
+                        <span class="row__file__message__body__item __select__body__item">История назначении</span>
+                        <span class="row__file__message__body__item __select__body__item">Назначение исполнителя</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <!-- этот блок обязательный -->
+               <input id="check-11" type="checkbox" class="check">
+               <label for="check-11" class="row__checked"> </label>
+               <div class="row__content">
+                  <span class="row__content__col">3</span>
+                  <span class="row__content__col">Дефектоскоп УД2-70<br>
+                     (Преобразователь П 121- 5 – 65-М - 003,<br>
+                     П 121- 2.5 - 65,<br>
+                     П 121- 5 – 70-М - 003)</span>
+                  <span class="row__content__col">Ультразвуковой контроль металла и сварных соединений</span>
+                  <span class="row__content__col">ООО "НПК ЛУЧ"<br>
+                     № 1245, 2005/2018г.<br>
+                     № 010<br>
+                     № 044<br>
+                     № 134</span>
+                  <span class="row__content__col">от 2 до 5000 мм<br>
+                     ±(0,5+0,02Н)</span>
+                  <span class="row__content__col">ООО
+                     «НИИПГАЗА»</span>
+                  <div class="row__content__col03">
+                     <div class="row__content__col __select">
+                        <span class="__select__header">С-АБ/05-03- 2022/139655940</span>
+                        <div class="row__file__message__body__treagle __select__body">
+                           <span class="row__content__col__modal__title">История назначении</span>
+                           <div class="row__content__col__modal__content">
+                              <div class="row__content__col__modal__content__header">
+                                 <span class="row__content__col__modal__content__header__item">Исполнители</span>
+                                 <span class="row__content__col__modal__content__header__item">День выдачи</span>
+                                 <span class="row__content__col__modal__content__header__item">День сдачи</span>
+                              </div>
+                              <div class="row__content__col__modal__content__items">
+                                 <div class="row__content__col__modal__content__item">
+                                    <span class="row__content__col__modal__content__item__text">Петров С.В<br>Васечкин
+                                       О.А</span>
+                                    <span class="row__content__col__modal__content__item__text">09.02.2023 </span>
+                                    <span class="row__content__col__modal__content__item__text">09.02.2023 </span>
+                                 </div>
+                                 <div class="row__content__col__modal__content__item">
+                                    <span class="row__content__col__modal__content__item__text">Петров С.В<br>Васечкин
+                                       О.А</span>
+                                    <span class="row__content__col__modal__content__item__text">09.02.2023 </span>
+                                    <span class="row__content__col__modal__content__item__text">09.02.2023 </span>
+                                 </div>
+                                 <div class="row__content__col__modal__content__item">
+                                    <span class="row__content__col__modal__content__item__text">Петров С.В<br>Васечкин
+                                       О.А</span>
+                                    <span class="row__content__col__modal__content__item__text">09.02.2023 </span>
+                                    <span class="row__content__col__modal__content__item__text">09.02.2023 </span>
+                                 </div>
+                                 <div class="row__content__col__modal__content__item">
+                                    <span class="row__content__col__modal__content__item__text">Петров С.В<br>Васечкин
+                                       О.А</span>
+                                    <span class="row__content__col__modal__content__item__text">09.02.2023 </span>
+                                    <span class="row__content__col__modal__content__item__text">09.02.2023 </span>
+                                 </div>
+                                 <div class="row__content__col__modal__content__item">
+                                    <span class="row__content__col__modal__content__item__text">Петров С.В<br>Васечкин
+                                       О.А</span>
+                                    <span class="row__content__col__modal__content__item__text">09.02.2023 </span>
+                                    <span class="row__content__col__modal__content__item__text">09.02.2023 </span>
+                                 </div>
+                                 <div class="row__content__col__modal__content__item">
+                                    <span class="row__content__col__modal__content__item__text">Петров С.В<br>Васечкин
+                                       О.А</span>
+                                    <span class="row__content__col__modal__content__item__text">09.02.2023 </span>
+                                    <span class="row__content__col__modal__content__item__text">09.02.2023 </span>
+                                 </div>
+                                 <div class="row__content__col__modal__content__item">
+                                    <span class="row__content__col__modal__content__item__text">Петров С.В<br>Васечкин
+                                       О.А</span>
+                                    <span class="row__content__col__modal__content__item__text">09.02.2023 </span>
+                                    <span class="row__content__col__modal__content__item__text">09.02.2023 </span>
+                                 </div>
+                                 <div class="row__content__col__modal__content__item">
+                                    <span class="row__content__col__modal__content__item__text">Петров С.В<br>Васечкин
+                                       О.А</span>
+                                    <span class="row__content__col__modal__content__item__text">09.02.2023 </span>
+                                    <span class="row__content__col__modal__content__item__text">09.02.2023 </span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <span class="row__content__col">05.03.2022</span>
+                     <span class="row__content__col">04.03.2023</span>
+
+                  </div>
+                  <span class="row__content__col __status-work">В работе</span>
+               </div>
+               <div class="row__file">
+                  <div class="row__file__message __select">
+                     <div class="row__file__img __free __select__header">
+                        <img src="images/plainBlue.svg" alt="foldersmall" class="img-con">
+                     </div>
+                     <div class="row__file__message__body__treagle __select__body ">
+                        <div class="input__find">
+                           <div class="input__find__btn">
+                              <img src="images/find.svg" alt="find" class="img-con">
+                           </div>
+                           <input type="text" class="input" placeholder="Поиск исполнителя">
+                        </div>
+                        <div class="row__file__message__body__treagle__content ">
+                           <span class="row__file__message__body__treagle__content__title">В ожидании назначения</span>
+                           <span class="row__file__message__body__treagle__content__title">Команда</span>
+                           <div class="row__file__message__body__treagle__content__item">
+                              <div class="row__file__message__body__treagle__content__item__check">
+                                 <div class="checkBlock">
+                                    <input type="checkbox" class="checkbox__file" id="find01">
+                                    <label for="find01" class="find__label"></label>
+                                 </div>
+                              </div>
+                              <div class="row__file__message__body__treagle__content__user">
+                                 <div class="row__file__message__body__treagle__content__user__left">
+                                    <div class="row__file__message__body__treagle__content__user__left__avatar">
+                                       <picture><source srcset="images/user1.webp" type="image/webp"><img src="images/user1.jpg" alt="user" class="img-ab"></picture>
+                                    </div>
+                                    <span class="row__file__message__body__treagle__content__user__left__name">Петров
+                                       С.В</span>
+                                 </div>
+                                 <span class="row__file__message__body__treagle__content__user__right">инженер</span>
+                              </div>
+                              <div class="row__file__message__body__treagle__content__user">
+                                 <div class="row__file__message__body__treagle__content__user__left">
+                                    <div class="row__file__message__body__treagle__content__user__left__avatar">
+                                       <picture><source srcset="images/user2.webp" type="image/webp"><img src="images/user2.jpg" alt="user" class="img-ab"></picture>
+                                    </div>
+                                    <span class="row__file__message__body__treagle__content__user__left__name">Васечкин
+                                       О.А</span>
+                                 </div>
+                                 <span
+                                    class="row__file__message__body__treagle__content__user__right">дефектоскопист</span>
+                              </div>
+                           </div>
+                           <div class="row__file__message__body__treagle__content__item">
+                              <div class="row__file__message__body__treagle__content__item__check">
+                                 <div class="checkBlock">
+                                    <input type="checkbox" class="checkbox__file" id="find01">
+                                    <label for="find01" class="find__label"></label>
+                                 </div>
+                              </div>
+                              <div class="row__file__message__body__treagle__content__user">
+                                 <div class="row__file__message__body__treagle__content__user__left">
+                                    <div class="row__file__message__body__treagle__content__user__left__avatar">
+                                       <picture><source srcset="images/user1.webp" type="image/webp"><img src="images/user1.jpg" alt="user" class="img-ab"></picture>
+                                    </div>
+                                    <span class="row__file__message__body__treagle__content__user__left__name">Петров
+                                       С.В</span>
+                                 </div>
+                                 <span class="row__file__message__body__treagle__content__user__right">инженер</span>
+                              </div>
+                              <div class="row__file__message__body__treagle__content__user">
+                                 <div class="row__file__message__body__treagle__content__user__left">
+                                    <div class="row__file__message__body__treagle__content__user__left__avatar">
+                                       <picture><source srcset="images/user2.webp" type="image/webp"><img src="images/user2.jpg" alt="user" class="img-ab"></picture>
+                                    </div>
+                                    <span class="row__file__message__body__treagle__content__user__left__name">Васечкин
+                                       О.А</span>
+                                 </div>
+                                 <span
+                                    class="row__file__message__body__treagle__content__user__right">дефектоскопист</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row__file__message__body__treagle__content__buttons">
+                           <button class="row__file__message__body__treagle__content__button _btn">Назначить</button>
+                           <button class="row__file__message__body__treagle__content__button _btn-tr">Отменить</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</main>
+   </div>
+</body>
+
+</html>
