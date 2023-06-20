@@ -3,8 +3,6 @@ from django.db import models
 from users.models import User
 
 
-# Create your models here.
-
 class Plan(models.Model):
     mame = models.CharField(max_length=100)
 
