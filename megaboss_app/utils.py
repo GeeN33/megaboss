@@ -1,5 +1,7 @@
-import pandas as pd
+# import pandas as pd
+from datetime import datetime
 
+import xlrd
 from megaboss_app.models import *
 
 def import_excel_to_db(file, file_mame):
@@ -7,14 +9,20 @@ def import_excel_to_db(file, file_mame):
     plan, _ = Plan.objects.get_or_create(mame=file_mame)
     createds = 0
     try:
-        excel_data_df = pd.read_excel(file, sheet_name='ПЛАН', header=None)
+        # excel_data_df = pd.read_excel(file, sheet_name='ПЛАН', header=None)
+        book = xlrd.open_workbook(file, formatting_info=True)
+        sheet = book.sheet_by_name('ПЛАН')
 
         ll=[]
         i=0
-
-        for row in excel_data_df.to_dict(orient='records'):
+        for rownum in range(sheet.nrows):
+            row = sheet.row_values(rownum)
             i += 1
-            ll.append({'id_row':i, 'row':row })
+            ll.append({'id_row': i, 'row': row})
+
+        # for row in excel_data_df.to_dict(orient='records'):
+        #     i += 1
+        #     ll.append({'id_row':i, 'row':row })
 
         for j in range(len(ll)):
             if j > 5 and j < 100:
@@ -52,19 +60,27 @@ def import_excel_to_cache(file, file_mame):
     row_new = 0
     row_updata = 0
     row_error = 0
-
     try:
-        excel_data_df = pd.read_excel(file, sheet_name='ПЛАН', header=None)
+
+        book = xlrd.open_workbook(file_contents=file)
+        sheet = book.sheet_by_name('ПЛАН')
+        # excel_data_df = pd.read_excel(file, sheet_name='ПЛАН', header=None)
         plan_list=[]
         ll=[]
         i=0
 
-        for row in excel_data_df.to_dict(orient='records'):
+        for rownum in range(sheet.nrows):
+            row = sheet.row_values(rownum)
             i += 1
-            ll.append({'id_row':i, 'row':row })
+            ll.append({'id_row': i, 'row': row})
+            # if i<10: print(row)
+
+        # for row in excel_data_df.to_dict(orient='records'):
+        #     i += 1
+        #     ll.append({'id_row':i, 'row':row })
 
         for j in range(len(ll)):
-            if j > 5 and j < 105:
+            if j > 5 and j < 150:
                data = data_to_dict_cache(ll[j]['id_row'], 1 , ll[j]['row'])
                pp = plan_rows.filter(id_row=ll[j]['id_row']).values()
                if pp:
@@ -78,6 +94,7 @@ def import_excel_to_cache(file, file_mame):
                datas = {
                    'data': data
                }
+               # print(datas)
                plan_list.append(datas)
 
     except Exception:
@@ -183,34 +200,41 @@ def data_to_dict_cache(id_row ,plan_id, d):
         'col_30'  : str(d[30]),
         'col_31'  : str(d[31]),
         'col_32'  : str(d[32]),
-        'col_33'  : str(d[33]),
-        'col_34'  : str(d[34]),
-        'col_35'  : str(d[35]),
-        'col_36'  : str(d[36]),
+        'col_33':  xldate_as_date(d[33]),
+        'col_34'  : xldate_as_date(d[34]),
+        'col_35'  : xldate_as_date(d[35]),
+        'col_36'  : xldate_as_date(d[36]),
         'col_37'  : str(d[37]),
         'col_38'  : str(d[38]),
         'col_39'  : str(d[39]),
         'col_40'  : str(d[40]),
         'col_41'  : str(d[41]),
-        'col_42'  : str(d[42]),
-        'col_43'  : str(d[43]),
+        'col_42'  : xldate_as_date(d[42]),
+        'col_43'  : xldate_as_date(d[43]),
         'col_44'  : str(d[44]),
         'col_45'  : str(d[45]),
         'col_46'  : str(d[46]),
-        'col_47'  : str(d[47]),
-        'col_48'  : str(d[48]),
+        'col_47'  : xldate_as_date(d[47]),
+        'col_48'  : xldate_as_date(d[48]),
         'col_49'  : str(d[49]),
-        'col_50'  : str(d[50]),
+        'col_50'  : xldate_as_date(d[50]),
         'col_51'  : str(d[51]),
         'col_52'  : str(d[52]),
-        'col_53'  : str(d[53]),
+        'col_53'  : xldate_as_date(d[53]),
         'col_54'  : str(d[54]),
         'col_55'  : str(d[55]),
         'col_56'  : str(d[56])
         }
 
 
+def xldate_as_date(dd):
+    if isinstance(dd, (int, float)):
 
+        datet = datetime(*xlrd.xldate_as_tuple(dd,0))
+
+        return str(datet)
+    else:
+     return  str(dd)
 
 
 def collums_load(apps, schema_editor):
